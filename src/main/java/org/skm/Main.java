@@ -10,25 +10,24 @@ public class Main {
     public static void main(String[] args) {
 
         //Strategy Pattern
-
         MallarDuck mallarDuck=new MallarDuck();
+        mallarDuck.display();
         mallarDuck.quack();
         mallarDuck.swim();
         mallarDuck.fly();
-        mallarDuck.display();
-
 
         RedheadDuck redheadDuck=new RedheadDuck();
+        redheadDuck.display();
         redheadDuck.quack();
         redheadDuck.swim();
         redheadDuck.fly();
-        redheadDuck.display();
+
 
         RubberDuck rubberDuck=new RubberDuck();
+        rubberDuck.display();
         rubberDuck.quack();
         rubberDuck.swim();
         rubberDuck.fly();
-        rubberDuck.display();
 
 
     }
