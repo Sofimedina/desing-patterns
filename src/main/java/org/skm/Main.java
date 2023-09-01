@@ -1,10 +1,7 @@
 package org.skm;
 
 
-import org.skm.SimUDuck.Duck;
-import org.skm.SimUDuck.MallarDuck;
-import org.skm.SimUDuck.RedheadDuck;
-import org.skm.SimUDuck.RubberDuck;
+import org.skm.SimUDuck.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -27,7 +24,13 @@ public class Main {
         rubberDuck.display();
         rubberDuck.quack();
         rubberDuck.swim();
-        rubberDuck.fly();
+//        rubberDuck.fly();
+
+        DecoyDuck decoyDuck=new DecoyDuck();
+        decoyDuck.display();
+//        decoyDuck.quack();
+        decoyDuck.swim();
+//        decoyDuck.fly();
 
 
     }
