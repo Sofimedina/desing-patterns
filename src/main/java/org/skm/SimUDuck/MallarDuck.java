@@ -1,19 +1,9 @@
 package org.skm.SimUDuck;
 
-public class MallarDuck implements Duck {
-
-    @Override
-    public void quack() {
-        System.out.println("mallar quak quak");
-    }
-
-    @Override
-    public void swim() {
-        System.out.println("mallar swim");
-    }
+public class MallarDuck extends Duck {
 
     @Override
     public void display() {
-        System.out.println("mallar showing");
+        System.out.println("mallar showing\n");
     }
 }
