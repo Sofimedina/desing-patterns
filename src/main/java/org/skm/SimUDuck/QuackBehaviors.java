@@ -1,5 +1,5 @@
 package org.skm.SimUDuck;
 
-public interface Quackable {
+public interface QuackBehaviors {
     void quack();
 }

@@ -1,24 +1,17 @@
 package org.skm.SimUDuck;
 
-public class RedheadDuck implements Duck, Quackable,Flyable {
+public class RedheadDuck extends Duck {
 
-    @Override
-    public void swim() {
-        System.out.println("swim");
+    public RedheadDuck(){
+        this.flyBehaviors=new FlyWithWings();
+        this.quackBehaviors=new Squack();
     }
+
 
     @Override
     public void display() {
         System.out.println("\nred showing");
     }
 
-    @Override
-    public void quack() {
-        System.out.println("quak");
-    }
 
-    @Override
-    public void fly() {
-        System.out.println("flying");
-    }
 }

@@ -1,10 +1,10 @@
 package org.skm.SimUDuck;
 
-public class MallarDuck implements Duck, Quackable, Flyable {
+public class MallarDuck extends Duck{
 
-    @Override
-    public void swim() {
-        System.out.println("swim");
+    public MallarDuck(){
+        this.quackBehaviors=new Quack();
+        this.flyBehaviors=new FlyWithWings();
     }
 
 
@@ -13,13 +13,4 @@ public class MallarDuck implements Duck, Quackable, Flyable {
         System.out.println("\nmallar showing");
     }
 
-    @Override
-    public void quack() {
-        System.out.println("quak");
-    }
-
-    @Override
-    public void fly() {
-        System.out.println("flying");
-    }
 }

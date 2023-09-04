@@ -1,10 +1,10 @@
 package org.skm.SimUDuck;
 
-public class RubberDuck implements Duck, Quackable{
+public class RubberDuck extends Duck{
 
-    @Override
-    public void swim() {
-        System.out.println("swim");
+    public RubberDuck(){
+        this.quackBehaviors=new Quack();
+        this.flyBehaviors=new FlyNoWay();
     }
 
     @Override
@@ -12,8 +12,4 @@ public class RubberDuck implements Duck, Quackable{
         System.out.println("\nRubber Duck showing");
     }
 
-    @Override
-    public void quack() {
-        System.out.println("quak");
-    }
 }

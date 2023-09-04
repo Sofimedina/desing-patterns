@@ -9,28 +9,28 @@ public class Main {
         //Strategy Pattern
         MallarDuck mallarDuck=new MallarDuck();
         mallarDuck.display();
-        mallarDuck.quack();
         mallarDuck.swim();
-        mallarDuck.fly();
+        mallarDuck.performQuack();
+        mallarDuck.performFly();
 
         RedheadDuck redheadDuck=new RedheadDuck();
         redheadDuck.display();
-        redheadDuck.quack();
         redheadDuck.swim();
-        redheadDuck.fly();
+        redheadDuck.performQuack();
+        redheadDuck.performFly();
 
 
         RubberDuck rubberDuck=new RubberDuck();
         rubberDuck.display();
-        rubberDuck.quack();
         rubberDuck.swim();
-//        rubberDuck.fly();
+        rubberDuck.performFly();
+        rubberDuck.performQuack();
 
         DecoyDuck decoyDuck=new DecoyDuck();
         decoyDuck.display();
-//        decoyDuck.quack();
         decoyDuck.swim();
-//        decoyDuck.fly();
+        decoyDuck.performFly();
+        decoyDuck.performQuack();
 
 
     }
