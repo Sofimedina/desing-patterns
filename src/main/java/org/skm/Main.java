@@ -2,35 +2,38 @@ package org.skm;
 
 
 import org.skm.SimUDuck.*;
+import org.skm.SimUDuck.DecoyDuck;
+
+import java.util.Scanner;
 
 public class Main {
+
+    public final static String PATTERN_STRATEGY="PATTERN_STRATEGY";
     public static void main(String[] args) {
 
-        //Strategy Pattern
-        MallarDuck mallarDuck=new MallarDuck();
-        mallarDuck.display();
-        mallarDuck.swim();
-        mallarDuck.performQuack();
-        mallarDuck.performFly();
+        Scanner sc=new Scanner(System.in);
 
-        RedheadDuck redheadDuck=new RedheadDuck();
-        redheadDuck.display();
-        redheadDuck.swim();
-        redheadDuck.performQuack();
-        redheadDuck.performFly();
+        System.out.println("SELECT EG TO RUN:\n" +
+                "0:EXIT\n" +
+                "1:PATTERN_STRATEGY\n");
 
 
-        RubberDuck rubberDuck=new RubberDuck();
-        rubberDuck.display();
-        rubberDuck.swim();
-        rubberDuck.performFly();
-        rubberDuck.performQuack();
+        switch (sc.nextLine()){
+            case "0":
+                System.out.println("byeee");
+                break;
+            case "1":
+                System.out.println("Running:"+PATTERN_STRATEGY);
+                SimUDuck simUDuck=new SimUDuck();
+                simUDuck.run();
+                break;
 
-        DecoyDuck decoyDuck=new DecoyDuck();
-        decoyDuck.display();
-        decoyDuck.swim();
-        decoyDuck.performFly();
-        decoyDuck.performQuack();
+            default:
+                System.out.println("byyeee");
+
+        }
+
+
 
 
     }

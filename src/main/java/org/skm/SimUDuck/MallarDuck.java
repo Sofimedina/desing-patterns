@@ -1,6 +1,6 @@
 package org.skm.SimUDuck;
 
-public class MallarDuck extends Duck{
+public class MallarDuck extends Duck {
 
     public MallarDuck(){
         this.quackBehaviors=new Quack();
