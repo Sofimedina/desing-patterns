@@ -4,12 +4,28 @@ public class Duck {
     FlyBehaviors flyBehaviors;
     QuackBehaviors quackBehaviors;
 
-    public void performQuack(){
-        this.quackBehaviors.quack();
+    public void setFlyBehaviors(FlyBehaviors flyBehaviors) {
+        this.flyBehaviors = flyBehaviors;
+    }
+
+    public void setQuackBehaviors(QuackBehaviors quackBehaviors) {
+        this.quackBehaviors = quackBehaviors;
+    }
+
+    public FlyBehaviors getFlyBehaviors() {
+        return flyBehaviors;
+    }
+
+    public QuackBehaviors getQuackBehaviors() {
+        return quackBehaviors;
     }
 
     public void performFly(){
-        this.flyBehaviors.fly();
+        flyBehaviors.fly();
+    }
+
+    public void performQuack(){
+        quackBehaviors.quack();
     };
     public void swim(){
         System.out.println("swimming");

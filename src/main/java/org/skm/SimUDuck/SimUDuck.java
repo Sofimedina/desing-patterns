@@ -31,8 +31,8 @@ public class SimUDuck {
         RubberDuck rubberDuck=new RubberDuck();
         rubberDuck.display();
         rubberDuck.swim();
-        rubberDuck.performFly();
         rubberDuck.performQuack();
+        rubberDuck.performFly();
 
         DecoyDuck decoyDuck=new DecoyDuck();
         decoyDuck.display();
