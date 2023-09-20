@@ -1,16 +1,12 @@
 package org.skm.WeatherORama;
 
 
-public class WeatherData {
-     currentConditionDisplay currentConditionDisplay;
-     statisticDisplay statisticDisplay;
-
-     forecastDisplay forecastDisplay;
+public class WeatherData implements Subject {
+     CurrentConditionDisplay currentConditionDisplay;
+     StatisticDisplay statisticDisplay;
+     ForecastDisplay forecastDisplay;
 
     public WeatherData() {
-        this.currentConditionDisplay = new currentConditionDisplay();
-        this.statisticDisplay = new statisticDisplay();
-        this.forecastDisplay = new forecastDisplay();
     }
 
     public float getTempeture(){
@@ -26,13 +22,20 @@ public class WeatherData {
 
     public void measurementChanged(){
 
-        float temp=getTempeture();
-        float humidity=getHumidity();
-        float pressure=getPresure();
+    }
 
-        this.currentConditionDisplay.update(temp,humidity,pressure);
-        this.statisticDisplay.update(temp,humidity,pressure);
-        this.forecastDisplay.update(temp,humidity,pressure);
+    @Override
+    public void registerObserver() {
+
+    }
+
+    @Override
+    public void removeObserver() {
+
+    }
+
+    @Override
+    public void notifyObservers() {
 
     }
 }
