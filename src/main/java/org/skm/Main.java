@@ -1,8 +1,8 @@
 package org.skm;
 
 
+import org.skm.LifeChangingApp.LifeChangingApp;
 import org.skm.SimUDuck.*;
-import org.skm.SimUDuck.DecoyDuck;
 import org.skm.WeatherORama.WeatherOrama;
 
 import java.util.Scanner;
@@ -19,25 +19,33 @@ public class Main {
 //                "0:EXIT\n" +
 //                "1:PATTERN_STRATEGY\n");
 //
-//
-//        switch (sc.nextLine()){
-//            case "0":
-//                System.out.println("byeee");
-//                break;
-//            case "1":
-//                System.out.println("Running:"+PATTERN_STRATEGY);
-//                SimUDuck simUDuck=new SimUDuck();
-//                simUDuck.run();
-//                break;
-//            case "2":
+//        String option_choose=sc.nextLine();
+        String option_choose="3";
+
+        switch (option_choose){
+            case "0":
+                System.out.println("byeee");
+                break;
+            case "1":
+                System.out.println("Running:"+PATTERN_STRATEGY);
+                SimUDuck simUDuck=new SimUDuck();
+                simUDuck.run();
+                break;
+            case "2":
                 System.out.println("Running:"+PATTERN_OBSERVER);
                 WeatherOrama  weatherOrama=new WeatherOrama();
                 weatherOrama.run();
-//                break;
-//
-//            default:
-//                System.out.println("byyeee");
+                break;
 
-//        }
+            case "3":
+                System.out.println("Running:"+PATTERN_OBSERVER+"-LIFE-CHANGING-APP");
+                LifeChangingApp lifeChangingApp=new LifeChangingApp();
+                lifeChangingApp.run();
+                break;
+
+            default:
+                System.out.println("byyeee");
+
+        }
     }
 }
