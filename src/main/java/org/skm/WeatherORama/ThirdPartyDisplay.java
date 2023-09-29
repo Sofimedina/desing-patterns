@@ -12,13 +12,13 @@ public class ThirdPartyDisplay implements Observer, DisplayElement {
 
     @Override
     public void display() {
-        System.out.println("THIRD PARTY D:<<<Pressure:"+this.pressure);
+        System.out.println("THIRD PARTY D:Pressure:"+this.pressure);
     }
 
 
     @Override
-    public void update(float temperature, float humidity, float pressure) {
-        this.pressure=pressure;
+    public void update() {
+        this.pressure=weatherData.getPressure();
         display();
     }
 }

@@ -16,8 +16,8 @@ public class StatisticDisplay implements DisplayElement,Observer {
     }
 
     @Override
-    public void update(float temperature, float humidity, float pressure) {
-        this.humidity=humidity;
+    public void update() {
+        this.humidity= weatherData.getHumidity();
         display();
     }
 }
