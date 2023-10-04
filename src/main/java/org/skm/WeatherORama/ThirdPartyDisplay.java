@@ -2,13 +2,23 @@ package org.skm.WeatherORama;
 
 
 public class ThirdPartyDisplay implements Observer, DisplayElement {
-    @Override
-    public void display() {
+    private float pressure;
+    private  WeatherData weatherData;
 
+    public ThirdPartyDisplay(WeatherData weatherData) {
+        this.weatherData=weatherData;
+        weatherData.registerObserver(this);
     }
 
     @Override
-    public void update() {
+    public void display() {
+        System.out.println("THIRD PARTY D:Pressure:"+this.pressure);
+    }
 
+
+    @Override
+    public void update() {
+        this.pressure=weatherData.getPressure();
+        display();
     }
 }

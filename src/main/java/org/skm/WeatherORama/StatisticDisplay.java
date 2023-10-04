@@ -1,17 +1,23 @@
 package org.skm.WeatherORama;
 
 public class StatisticDisplay implements DisplayElement,Observer {
-    public StatisticDisplay() {
+
+    private float humidity;
+    private  WeatherData weatherData;
+    public StatisticDisplay(WeatherData weatherData) {
+        this.weatherData=weatherData;
+        weatherData.registerObserver(this);
     }
 
 
     @Override
     public void display() {
-
+        System.out.println("STATISTIC:Humidity:"+this.humidity);
     }
 
     @Override
     public void update() {
-
+        this.humidity= weatherData.getHumidity();
+        display();
     }
 }
