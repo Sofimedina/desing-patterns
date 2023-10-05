@@ -5,7 +5,12 @@ public class StarbuzzCoffee {
     }
 
     public void run(){
-        System.out.println("running decorator example");
+        Beverage beverage1=new HouseBlend();
+        beverage1=new Whip(beverage1);
+        beverage1=new Whip(beverage1);
+
+
+        System.out.println(beverage1.getDescription()+" "+beverage1.cost());
     }
 
 }

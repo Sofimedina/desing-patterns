@@ -1,0 +1,14 @@
+package org.skm.StarbuzzCoffeeApp;
+
+public class HouseBlend extends Beverage{
+
+    @Override
+    public String getDescription() {
+        return "House Blend";
+    }
+
+    @Override
+    public float cost() {
+        return 0.89f;
+    }
+}
