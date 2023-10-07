@@ -11,6 +11,7 @@ public class StarbuzzCoffee {
         
         Beverage beverage2=new DarkRoast();
         
+        beverage2.setSize(Beverage.Size.TALL);
         beverage2=new Mocha(beverage2);
         beverage2=new Mocha(beverage2);
         beverage2=new Whip(beverage2);
