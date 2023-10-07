@@ -1,6 +1,7 @@
 package org.skm;
 
 
+import org.skm.DecoratorIO.UsingJavaIo;
 import org.skm.LifeChangingApp.LifeChangingApp;
 import org.skm.SimUDuck.*;
 import org.skm.StarbuzzCoffeeApp.StarbuzzCoffee;
@@ -16,18 +17,19 @@ public class Main {
 
     public static void main(String[] args) {
 
-//        Scanner sc = new Scanner(System.in);
-//
-//        System.out.println("SELECT EG TO RUN:\n" +
-//                "0:EXIT\n" +
-//                "1:"+PATTERN_STRATEGY+"\n" +
-//                "2:"+PATTERN_OBSERVER+"\n" +
-//                "3:"+PATTERN_STRATEGY+ "-LIFE-CHANGING-APP\n"+
-//                "4:"+PATTERN_DECORATOR+"\n"
-//        );
-//
-//        String option_choose = sc.nextLine();
-        String option_choose="4";
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("SELECT EG TO RUN:\n" +
+                "0:EXIT\n" +
+                "1:"+PATTERN_STRATEGY+"\n" +
+                "2:"+PATTERN_OBSERVER+"\n" +
+                "3:"+PATTERN_STRATEGY+ "-LIFE-CHANGING-APP\n"+
+                "4:"+PATTERN_DECORATOR+"\n"+
+                "5:"+PATTERN_DECORATOR+"-DECORATOR IO\n"
+        );
+
+        String option_choose = sc.nextLine();
+//        String option_choose="5";
 
         switch (option_choose) {
             case "0":
@@ -54,6 +56,13 @@ public class Main {
                 System.out.println("Running:" + PATTERN_DECORATOR );
                 StarbuzzCoffee starbuzzCoffee = new StarbuzzCoffee();
                 starbuzzCoffee.run();
+
+                break;
+
+            case "5":
+                System.out.println("Running:" + PATTERN_DECORATOR +"-DECORATOR IO");
+                UsingJavaIo usingJavaIo=new UsingJavaIo();
+                usingJavaIo.run();
                 break;
 
             default:
