@@ -6,8 +6,15 @@ public class PizzaStoreApp {
 
     public void run(){
         System.out.println("Pizza store app");
-        PizzaStore pizzaStore=new NyPizzaStore();
-        pizzaStore.orderPizza("Cheese");
+        PizzaStore NYStore=new NyPizzaStore();
+        PizzaStore ChicagoStore=new ChicagoPizzaStore();
+
+        Pizza pizza=NYStore.orderPizza("Cheese");
+        System.out.println("Ethan ordered a "+pizza.getName()+"\n");
+
+
+        pizza=ChicagoStore.orderPizza("Cheese");
+        System.out.println("Joel ordered a "+pizza.getName()+"\n");
 
 
     }
