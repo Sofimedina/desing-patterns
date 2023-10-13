@@ -3,12 +3,21 @@ package org.skm.PizzaStoreApp;
 public class NyPizzaStore extends PizzaStore {
     @Override
     public Pizza createPizza(String type) {
+        Pizza pizza=null;
+
+        PizzaIngredientsFactory pizzaIngredientsFactory=new NYPizzaIngredientsFactory();
+
         if (type.equals("Cheese")) {
-            return new NYCheesePizza();
+            pizza=new CheesePizza(pizzaIngredientsFactory);
+            pizza.setName("NY cheese Pizza");
         }else if(type.equals("Greek")){
-            return new NYGreekPizza();
+            pizza=new GreekPizza(pizzaIngredientsFactory);
+            pizza.setName("NY Greek Pizza");
         }else if (type.equals("Pepperoni")){
-            return new NYPepperoniPizza();
-        }else return null;
+            pizza=new PepperoniPizza(pizzaIngredientsFactory);
+            pizza.setName("NY Pepperoni Pizza");
+        }
+
+        return pizza;
     }
 }

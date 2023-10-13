@@ -1,24 +1,26 @@
 package org.skm.PizzaStoreApp;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public abstract class Pizza {
 
-    String name;
-    String dought;
-    String sauce;
-    List<String> toppings=new ArrayList<String>();
+    Dought dought;
+    Sauce sauce;
+    Cheese cheese;
+    Veggies[] veggies;
+    Pepperoni pepperoni;
+    Clams clams;
 
-    void prepare(){
-        System.out.println("Preparing "+name);
-        System.out.println("Tossing dought "+dought);
-        System.out.println("Adding sauce "+sauce);
-        System.out.println("Adding toppings:");
-        for (String topping:toppings) {
-            System.out.println("    "+topping);
-        }
-    };
+    String name;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    abstract void prepare();
+
     void bake(){
         System.out.println("Baking for 20 min a 300");
     };
@@ -31,5 +33,18 @@ public abstract class Pizza {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public String toString() {
+        return "Pizza{" +
+                "dought=" + dought +
+                ", sauce=" + sauce +
+                ", cheese=" + cheese +
+                ", veggies=" + Arrays.toString(veggies) +
+                ", pepperoni=" + pepperoni +
+                ", clams=" + clams +
+                ", name='" + name + '\'' +
+                '}';
     }
 }

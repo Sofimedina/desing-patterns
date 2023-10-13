@@ -10,11 +10,11 @@ public class PizzaStoreApp {
         PizzaStore ChicagoStore=new ChicagoPizzaStore();
 
         Pizza pizza=NYStore.orderPizza("Cheese");
-        System.out.println("Ethan ordered a "+pizza.getName()+"\n");
+        System.out.println("Ethan ordered a "+pizza.getName()+"\n"+pizza.toString());
 
 
         pizza=ChicagoStore.orderPizza("Cheese");
-        System.out.println("Joel ordered a "+pizza.getName()+"\n");
+        System.out.println("Joel ordered a "+pizza.getName()+"\n"+pizza.toString());
 
 
     }
