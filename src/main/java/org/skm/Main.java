@@ -3,6 +3,7 @@ package org.skm;
 
 import org.skm.DecoratorIO.UsingJavaIo;
 import org.skm.LifeChangingApp.LifeChangingApp;
+import org.skm.PizzaStoreApp.PizzaStoreApp;
 import org.skm.SimUDuck.*;
 import org.skm.StarbuzzCoffeeApp.StarbuzzCoffee;
 import org.skm.WeatherORama.WeatherOrama;
@@ -14,22 +15,24 @@ public class Main {
     public final static String PATTERN_STRATEGY = "PATTERN_STRATEGY";
     public final static String PATTERN_OBSERVER = "PATTERN_OBSERVER";
     public final static String PATTERN_DECORATOR = "PATTERN_DECORATOR";
+    public final static String PATTERN_FACTORY = "PATTERN_FACTORY";
 
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("SELECT EG TO RUN:\n" +
-                "0:EXIT\n" +
-                "1:"+PATTERN_STRATEGY+"\n" +
-                "2:"+PATTERN_OBSERVER+"\n" +
-                "3:"+PATTERN_STRATEGY+ "-LIFE-CHANGING-APP\n"+
-                "4:"+PATTERN_DECORATOR+"\n"+
-                "5:"+PATTERN_DECORATOR+"-DECORATOR IO\n"
-        );
-
-        String option_choose = sc.nextLine();
-//        String option_choose="5";
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.println("SELECT EG TO RUN:\n" +
+//                "0:EXIT\n" +
+//                "1:"+PATTERN_STRATEGY+"\n" +
+//                "2:"+PATTERN_OBSERVER+"\n" +
+//                "3:"+PATTERN_STRATEGY+ "-LIFE-CHANGING-APP\n"+
+//                "4:"+PATTERN_DECORATOR+"\n"+
+//                "5:"+PATTERN_DECORATOR+"-DECORATOR IO\n"+
+//                "6:"+PATTERN_FACTORY+"\n"
+//        );
+//
+//        String option_choose = sc.nextLine();
+        String option_choose="6";
 
         switch (option_choose) {
             case "0":
@@ -63,6 +66,12 @@ public class Main {
                 System.out.println("Running:" + PATTERN_DECORATOR +"-DECORATOR IO");
                 UsingJavaIo usingJavaIo=new UsingJavaIo();
                 usingJavaIo.run();
+                break;
+
+            case "6":
+                System.out.println("Running:" + PATTERN_FACTORY);
+                PizzaStoreApp pizzaStoreApp=new PizzaStoreApp();
+                pizzaStoreApp.run();
                 break;
 
             default:
