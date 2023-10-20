@@ -4,9 +4,16 @@ public class ChocolateBoiler {
     private boolean empty;
     private boolean boiled;
 
-    public ChocolateBoiler() {
-        this.empty = true;
-        this.boiled = false;
+    private static ChocolateBoiler chocolateBoilerSingleton;
+
+    private ChocolateBoiler() {
+    }
+
+    public static ChocolateBoiler getChocolateBoiler(){
+        if (chocolateBoilerSingleton==null){
+            return new ChocolateBoiler();
+        }
+        return chocolateBoilerSingleton;
     }
 
     public void fill(){
