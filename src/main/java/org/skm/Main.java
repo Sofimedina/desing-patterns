@@ -1,6 +1,7 @@
 package org.skm;
 
 
+import org.skm.ChocoholicApp.ChocoholicApp;
 import org.skm.DecoratorIO.UsingJavaIo;
 import org.skm.LifeChangingApp.LifeChangingApp;
 import org.skm.PizzaStoreApp.PizzaStoreApp;
@@ -16,6 +17,7 @@ public class Main {
     public final static String PATTERN_OBSERVER = "PATTERN_OBSERVER";
     public final static String PATTERN_DECORATOR = "PATTERN_DECORATOR";
     public final static String PATTERN_FACTORY = "PATTERN_FACTORY";
+    private static final String PATTERN_SINGLETON ="PATTERN_SINGLETON" ;
 
     public static void main(String[] args) {
 
@@ -32,7 +34,7 @@ public class Main {
 //        );
 //
 //        String option_choose = sc.nextLine();
-        String option_choose="6";
+        String option_choose="7";
 
         switch (option_choose) {
             case "0":
@@ -73,6 +75,11 @@ public class Main {
                 PizzaStoreApp pizzaStoreApp=new PizzaStoreApp();
                 pizzaStoreApp.run();
                 break;
+            case "7":
+                System.out.println("Running:" + PATTERN_SINGLETON);
+                ChocoholicApp chocoholicApp=new ChocoholicApp();
+                chocoholicApp.run();
+                break;    
 
             default:
                 System.out.println("byyeee");
