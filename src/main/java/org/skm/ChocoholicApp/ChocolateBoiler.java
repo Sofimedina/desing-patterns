@@ -4,15 +4,12 @@ public class ChocolateBoiler {
     private boolean empty;
     private boolean boiled;
 
-    private static ChocolateBoiler chocolateBoilerSingleton;
+    private static ChocolateBoiler chocolateBoilerSingleton=new ChocolateBoiler();
 
     private ChocolateBoiler() {
     }
 
     public static ChocolateBoiler getChocolateBoiler(){
-        if (chocolateBoilerSingleton==null){
-            return new ChocolateBoiler();
-        }
         return chocolateBoilerSingleton;
     }
 
