@@ -6,5 +6,7 @@ public class RemoteControlApi {
         SimpleRemoteControl simpleRemoteControl = new SimpleRemoteControl();
         simpleRemoteControl.setCommand(new LightOnCommand(new Light()));
         simpleRemoteControl.buttonWasPressed();
+        simpleRemoteControl.setCommand(new GarageDoorOpenCommand(new GarageDoor()));
+        simpleRemoteControl.buttonWasPressed();
     }
 }
