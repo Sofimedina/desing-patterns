@@ -6,6 +6,7 @@ import org.skm.DecoratorIO.UsingJavaIo;
 import org.skm.LifeChangingApp.LifeChangingApp;
 import org.skm.PizzaStoreApp.PizzaStoreApp;
 import org.skm.RemoteControlAPI.RemoteControlApi;
+import org.skm.RemoteControlAPI.RemoteLoader;
 import org.skm.RemoteControlAPI.SimpleRemoteControl;
 import org.skm.SimUDuck.*;
 import org.skm.StarbuzzCoffeeApp.StarbuzzCoffee;
@@ -85,8 +86,8 @@ public class Main {
                 break;
             case "8":
                 System.out.println("Running:" + PATTERN_COMMAND);
-                RemoteControlApi remoteControlApi=new RemoteControlApi();
-                remoteControlApi.run();
+                RemoteLoader remoteLoader=new RemoteLoader();
+                remoteLoader.run();
                 break;
 
             default:
