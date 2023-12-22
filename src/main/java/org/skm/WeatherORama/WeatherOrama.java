@@ -1,10 +1,10 @@
 package org.skm.WeatherORama;
 
+import org.skm.EnumPatterns;
+
 public class WeatherOrama {
-
-
-
-    public void run(){
+    public static void main(String[] args) {
+        System.out.println("-------"+ EnumPatterns.PATTERN_OBSERVER+"--------");
         WeatherData weatherData=new WeatherData();
         ForecastDisplay forecastDisplay=new ForecastDisplay(weatherData);
         ThirdPartyDisplay thirdPartyDisplay=new ThirdPartyDisplay(weatherData);
@@ -19,5 +19,4 @@ public class WeatherOrama {
         weatherData.removeObserver(currentConditionDisplay);
         weatherData.setMeasurements(2,3,5);
     }
-
 }

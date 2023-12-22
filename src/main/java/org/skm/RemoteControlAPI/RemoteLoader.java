@@ -1,11 +1,11 @@
 package org.skm.RemoteControlAPI;
 
+import org.skm.EnumPatterns;
+
 public class RemoteLoader {
+    public static void main(String[] args) {
+        System.out.println("-------"+ EnumPatterns.PATTERN_COMMAND+"--------");
 
-    public RemoteLoader() {
-    }
-
-    public void run() {
         RemoteControl remoteControl = new RemoteControl();
         Light livingRoomLight = new Light("Living Room");
         Light kitchenLight = new Light("Kitchen");
@@ -31,7 +31,5 @@ public class RemoteLoader {
         remoteControl.offButtonWasPushed(3);
         remoteControl.onButtonWasPushed(4);
         remoteControl.offButtonWasPushed(4);
-
     }
-
 }

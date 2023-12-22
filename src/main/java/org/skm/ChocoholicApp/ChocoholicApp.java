@@ -1,17 +1,16 @@
 package org.skm.ChocoholicApp;
 
-public class ChocoholicApp {
-    public ChocoholicApp() {
-    }
+import org.skm.EnumPatterns;
 
-    public void run(){
-        System.out.println("Chocoholic");
+public class ChocoholicApp {
+
+    public static void main(String[] args) {
+        System.out.println("-------"+EnumPatterns.PATTERN_SINGLETON+"--------");
 
         ChocolateBoiler chocolateBoiler=ChocolateBoiler.getChocolateBoiler();
         System.out.println("Empty:"+chocolateBoiler.isEmpty()+"\n"+"Boiled:"+chocolateBoiler.isBoiled());
         chocolateBoiler.fill();
         System.out.println("Empty:"+chocolateBoiler.isEmpty()+"\n"+"Boiled:"+chocolateBoiler.isBoiled());
-
-
     }
+
 }
