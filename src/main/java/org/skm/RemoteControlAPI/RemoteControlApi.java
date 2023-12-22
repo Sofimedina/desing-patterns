@@ -1,8 +1,10 @@
 package org.skm.RemoteControlAPI;
 
-public class RemoteControlApi {
+import org.skm.EnumPatterns;
 
-    public void run() {
+public class RemoteControlApi {
+    public static void main(String[] args) {
+        System.out.println("-------"+ EnumPatterns.PATTERN_COMMAND+"--------");
         SimpleRemoteControl simpleRemoteControl = new SimpleRemoteControl();
         simpleRemoteControl.setCommand(new LightOnCommand(new Light("Default")));
         simpleRemoteControl.buttonWasPressed();

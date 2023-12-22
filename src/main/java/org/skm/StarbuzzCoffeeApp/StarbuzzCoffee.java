@@ -1,16 +1,16 @@
 package org.skm.StarbuzzCoffeeApp;
 
-public class StarbuzzCoffee {
-    public StarbuzzCoffee() {
-    }
+import org.skm.EnumPatterns;
 
-    public void run(){
+public class StarbuzzCoffee {
+    public static void main(String[] args) {
+        System.out.println("-------"+ EnumPatterns.PATTERN_DECORATOR+"--------");
         Beverage beverage=new Espresso();
 
         System.out.println(beverage.getDescription()+" $ "+beverage.cost());
-        
+
         Beverage beverage2=new DarkRoast();
-        
+
         beverage2.setSize(Beverage.Size.TALL);
         beverage2=new Mocha(beverage2);
         beverage2=new Mocha(beverage2);
@@ -26,5 +26,4 @@ public class StarbuzzCoffee {
 
         System.out.println(beverage3.getDescription()+" $ "+beverage3.cost());
     }
-
 }
